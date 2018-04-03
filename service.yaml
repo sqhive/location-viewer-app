@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: locations-viewer-app
+  namespace: dashboards
+spec:
+  type: ClusterIP
+  selector:
+    app: locations-viewer-app
+  ports:
+  - port: 80
+    targetPort: 5000
+    name: http

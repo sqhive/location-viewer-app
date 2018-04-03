@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: locations-viewer-app
+  namespace: dashboards
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: locations-viewer-app
+    spec:
+      containers:
+      - name: locations-viewer-app
+        image: gcr.io/sqhive-backend/locations-viewer-app
+        imagePullPolicy: Always
