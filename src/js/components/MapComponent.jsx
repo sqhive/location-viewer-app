@@ -29,7 +29,7 @@ class MapComponent
   componentDidMount() {
     const { websocketConnect } = this.props
 
-    websocketConnect('ws://localhost:8765')
+    websocketConnect('ws://locations-viewer-ws.dashboards')
   }
 
   render() {
